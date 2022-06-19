@@ -1,44 +1,67 @@
+/*
+    CSS의 역할이나 특성에 따라 그룹을 나눈다.
+    베이스 그룹, 레이아웃 그룹 만들기
+*/
+
+/* 베이스 그룹 */
+body {
+    font-family: sans-serif;
+}
+
 #main span {
     color: #555;
     font-size: 14px;
 }
 
-#main div.module.main-module {
-    /* 좌우 가운데 정렬을 위한 지점 */
+/* 레이아웃 그룹 */
+
+.ly_content {
     max-width: 1200px;
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+}
+
+/* 모듈 그룹 */
+
+#main div.bl_module.main-module { /* 모듈 그룹 정의 => bl_module */
+    /* 좌우 가운데 정렬을 위한 지점 => 위치 조정을 담당하는 코드. ly_content 를 만들고 한단계 상위의 article 에 클래스 추가 */
+    /* max-width: 1200px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto; */
+
     /* 모듈에 대한 지정 */
     display: flex;
     align-items: center;
-    font-family: sans-serif;
+    /* font-family: sans-serif; => body 요소에 적용. 사이트 전체에 적용하기 위해 = 베이스 그룹 */
     font-size: 16px;
     line-height: 1.5;
 }
 
-#main div.module.main-module figure {
+#main div.bl_module.main-module figure { /* 모듈 그룹 정의 => bl_module */
     flex: 1 1 25%;
     margin-right: 3.3333%;
 }
 
-#main div.module.main-module img {
+#main div.bl_module.main-module img { /* 모듈 그룹 정의 => bl_module */
     width: 100%;
     vertical-align: top;
 }
 
-#main div.module.main-module div {
+#main div.bl_module.main-module div { /* 모듈 그룹 정의 => bl_module */
     flex: 1 1 68.3333%;
 }
 
-#main div.module.main-module h2 {
+#main div.bl_module.main-module h2 { /* 모듈 그룹 정의 => bl_module */
     margin-bottom: 10px;
     font-size: 18px;
     font-weight: bold;
 }
 
-#main div.module.main-module h3 {
+#main div.bl_module.main-module h3 { /* 모듈 그룹 정의 => bl_module */
     margin-top: 10px;
     margin-bottom: 10px;
     font-size: 16px;
